@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        color: blue;
+        text-align: center;
+    }
+</style>
+<h1>민욱이의 로또 분석기</h1>
+<body>
+    <button id = "btn1">분석하기</button>
+</body>
+<script>
+    document.getElementById("btn1").addEventListener('click',play)
+    function play(){
+    var array = [2, 9, 9, 5];
+array.indexOf(2);  
+array.indexOf(9);  
+array.indexOf(5);  
+array.indexOf(7); 
+    var 추출 = [];
+for (i = 1; i <= 6; i += 1) {
+  var 랜덤숫자 = Math.floor(Math.random() * 40) + 1;
+  if (추출.indexOf(랜덤숫자) === -1) {
+    추출.push(랜덤숫자);
+  } else {
+    i--
+  }
+}
+추출.sort(function (a, b) {
+  return a - b;
+});
+document.write(추출);  }
+</script>
+</html>
